@@ -1,20 +1,16 @@
-name: Jekyll site CI
+name: Deploy Env Demo
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+on: workflow_dispatch
+
+env:
+  APP_ENV: "dev"
+
 
 jobs:
-  build:
+  env_demo:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Connecting to Env
+      run: echo "App is Connecting to $APP_ENV"
