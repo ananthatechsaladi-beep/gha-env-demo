@@ -13,3 +13,6 @@ jobs:
 
       - name: Print all the variables
         run: echo "${{ toJson(github) }}"
+
+      - name: Print environment variables
+        run: printenv
