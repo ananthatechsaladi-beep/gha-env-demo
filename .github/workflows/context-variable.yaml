@@ -11,4 +11,4 @@ jobs:
           echo "The repository name is ${{ github.repository }}"
 
       - name: Print all the variables
-        runs "${{ github }}"
+        run: echo "${{ github }}"
