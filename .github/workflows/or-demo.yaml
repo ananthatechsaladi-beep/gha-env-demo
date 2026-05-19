@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run for Anu or ananthatechsaladi-beep
-        if: github.actor == 'Anu' || 'ananthatechsaladi-beep'
+        if: github.actor == 'Anu' || github.actor == 'ananthatechsaladi-beep'
         run: echo "Running for master branch"
