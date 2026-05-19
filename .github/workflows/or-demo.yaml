@@ -1,0 +1,13 @@
+name: Or Demo
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Anu or ananthatechsaladi-beep
+        if: github.actor == 'Anu' || 'ananthatechsaladi-beep'
+        run: echo "Running for master branch"
