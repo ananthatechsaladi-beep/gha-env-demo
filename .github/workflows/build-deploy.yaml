@@ -14,11 +14,11 @@ jobs:
     steps:
       - name: Build step
         if: github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'master'
-        run: echo "Building appliction"
+        run: echo "Building Appliction"
 
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy Step
         if: github.event_name == 'push' && github.ref_name == 'master'
-        run: echo "Deploying application"
+        run: echo "Deploying Application"
